@@ -60,7 +60,7 @@ class Graph extends Component<IProps, {}> {
                 "timestamp":"distinct count"});
         }
       }
-    }
+
 
 
   componentDidUpdate(); {
