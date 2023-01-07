@@ -58,9 +58,7 @@ class Graph extends Component<IProps, {}> {
         "top_ask_price":"avg",
         "top_bid_price":"avg",
         "timestamp":"distinct count"}');
-    }
   }
-}
 }
 
 
