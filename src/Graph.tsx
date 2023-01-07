@@ -63,7 +63,7 @@ class Graph extends Component<IProps, {}> {
     }
 
 
-  componentDidUpdate() {
+  componentDidUpdate(): {
     // Everytime the data props is updated, insert the data into Perspective table
     if (this.table) {
       // As part of the task, you need to fix the way we update the data props to
