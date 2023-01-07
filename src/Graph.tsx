@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { ServerRespond } from './DataStreamer';
-import { Table } from '@jpmorganchase/perspective';
+import { Table } from '@finos/perspective';
 import './Graph.css';
 
 
 /**
  * Props declaration for <Graph />
  */
-
+interface IProps {
+  data: ServerRespond[],
+}
 
 interface PerspectiveViewerElement extends HTMLElement{
   load: (table: Table) => void,
