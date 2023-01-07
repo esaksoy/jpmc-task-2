@@ -33,12 +33,7 @@ class Graph extends Component<IProps, {}> {
   componentDidMount() {
     // Get element to attach the table from the DOM.
     const elem = document.getElementsByTagName ('perspective-viewer')[0] as PerspectiveViewerElement;
-    const schema = {
-      stock: 'string',
-      top_ask_price: 'float',
-      top_bid_price: 'float',
-      timestamp: 'date',
-    };
+
 
     if (window.perspective && window.perspective.worker()) {
       this.table = window.perspective.worker().table(schema);
@@ -55,10 +50,10 @@ class Graph extends Component<IProps, {}> {
             elem.setAttribute('columns', '["top_ask_price"]');
             elem.setAttribute('aggregates',
                 '
-                {"stock":"distinct count" ,
+                {"stock":"distinct count",
                 "top_ask_price":"avg",
                 "top_bid_price":"avg",
-                "timestamp":"distinct count"    } '  ) ;
+                "timestamp":"distinct count"    } '  )
         }
       }
 
